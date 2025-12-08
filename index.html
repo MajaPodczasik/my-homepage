@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First Homepage</title>
+    <link href="css/style.css" rel="stylesheet">
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+
+</head>
+
+<body class="body">
+    <header class="header">
+        <h1 class="header__main">Maja's World🌍</h1>
+        <nav class="header__navigation">
+            <ul class="navigation__list">
+                <li><a class="nagivation__listItem" href="#about">About</a></li>
+                <li><a class="nagivation__listItem" href="#concerts">Concerts</a></li>
+                <li><a class="nagivation__listItem" href="#travel">Travel</a></li>
+                <li><a class="nagivation__listItem" href="#future">Future Plans</a></li>
+                <li><a class="nagivation__listItem" href="#contact">Contact</a></li>
+            </ul>
+            <button id="themeToggle" class="navigation__button">🌜</button>
+        </nav>
+    </header>
+
+    <main class="main">
+        <section id="about" class="section__about">
+            <h2 class="subheading">About Me</h2>
+            <div class="introduction">
+                <p class="paragraph">Welcome to my first Homepage. I am a college student pursing a <b>science degree in
+                        computer
+                        science in Maynooth University, Ireland.</b> I also have a side fascination for psychology, so
+                    basically, I
+                    like
+                    figuring out how both machines and humans think 💻 🧠
+                </p>
+            </div>
+
+            <p class="buttonText">When I'm not debugging my life or my code, you'll find me...</p>
+            <button class="main__hobbiesButton">press to reveal/hide my hobbies</button>
+
+            <div class="paragraph" style="display:none;">
+                <p>📖Reading</p>
+                <p>🛍️Shopping</p>
+                <p>🎬Catching up on my favourite show on Netflix</p>
+                <p>🎶Losing my hearing at concerts (worth it)</p>
+            </div>
+        </section>
+
+        <section id="concerts" class="section__concerts">
+            <h2 class="subheading">Concerts</h2>
+            <p class="paragraph">Here are my favourite concerts I attended: Lana del Rey and Pitbull</p>
+            <div class="gallery">
+                <img src="images/lanadelrey.png" alt="concert" class="concert">
+                <img src="images/pitbull.jpeg" alt="concert" class="concert">
+            </div>
+        </section>
+
+        <section id="travel" class="section__travel">
+            <h2 class="subheading">Travel</h2>
+            <p class="travelText">I love exploring new places whenever I get the chance.
+                My favourite trip so far was to <b class="trip">Venice, Italy.</b> With it's canals, bridges, and the
+                kind
+                of
+                atmosphere
+                you can't find anywhere else.
+            </p>
+
+            <div class="gallery">
+                <img src="images/venicesunset.jpeg" alt="Sunset in Venice" class="venice">
+                <img src="images/basilica.jpeg" alt="Basilica in Venice" class="basilica">
+            </div>
+
+            <table class="table">
+                <caption>Places I have visited</caption>
+                <tr>
+                    <th scope="col">Country</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Favourite Memory</th>
+                </tr>
+                <tr>
+                    <th scope="row">Poland</th>
+                    <td>Kolberg</td>
+                    <td>Family and walks by the sea</td>
+                </tr>
+                <tr>
+                    <th scope="row">Italy</th>
+                    <td>Venice</td>
+                    <td>Getting lost in the alleys and beautiful views</td>
+                </tr>
+                <tr>
+                    <th scope="row">Spain</th>
+                    <td>Fuerteventura</td>
+                    <td>Hot weather and the beach</td>
+                </tr>
+            </table>
+            <button class="image">press to hide all picures</button>
+        </section>
+
+        <section id="future" class="section__future">
+            <h2 class="subheading">Future Goals</h2>
+            <p class="paragraph">My future plans? First: finish my degree 🎓.
+                After that, I want to dive deeper into AI and how people
+                interact with technology 💻🤖, work on more projects in computer science. And along the way, I plan
+                to travel more, keep going to concerts, and basically
+                collect as many experiences as I can ✈️🎶.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>Made with 💻 + ☕ by Maja | © 2025</p>
+    </footer>
+
+</body>
+
+</html>
