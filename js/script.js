@@ -1,35 +1,34 @@
-console.log("Welcome to my Homepage!");
+const button = document.querySelector(".main__hobbiesButton");
+const hobbies = document.querySelector("#hobbies");
+const imageBtn = document.querySelector(".image");
+const gallery = document.querySelector("#travel .gallery");
+const venice = document.querySelector(".venice");
+const basilica = document.querySelector(".basilica");
 
-let button = document.querySelector(".button");
-let hobbies = document.querySelector(".hobbies");
-let image = document.querySelector(".image");
-let gallery = document.querySelector(".gallery");
-let venice = document.querySelector(".venice");
-let basilica = document.querySelector(".basilica");
+if (button && hobbies) {
+    button.addEventListener("click", () => {
+        const isHidden = getComputedStyle(hobbies).display === 'none';
+        hobbies.style.display = isHidden ? 'block' : 'none';
+        // update accessibility attributes
+        button.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+        hobbies.setAttribute('aria-hidden', isHidden ? 'false' : 'true');
+    });
+}
 
-button.addEventListener("click", () => {
-    if (hobbies.style.display === "none") {
-        hobbies.style.display = "block";
-    } else {
-        hobbies.style.display = "none";
-    }
-});
-
-image.addEventListener("click", () => {
-    gallery.remove();
-    venice.remove();
-    basilica.remove();
-})
+if (imageBtn) {
+    imageBtn.addEventListener("click", () => {
+        if (gallery) gallery.remove();
+        if (venice) venice.remove();
+        if (basilica) basilica.remove();
+    });
+}
 
 const theme = document.querySelector("#themeToggle");
-const body = document.querySelector('body');
+const body = document.querySelector("body");
 
-theme.addEventListener("click", () => {
-    body.classList.toggle('dark-theme');
-
-    if (body.classList.contains('dark-theme')) {
-        theme.textContent = '☀️';
-    } else {
-        theme.textContent = '🌙';
-    }
-});
+if (theme && body) {
+    theme.addEventListener("click", () => {
+        body.classList.toggle("dark-theme");
+        theme.textContent = body.classList.contains("dark-theme") ? "☀️" : "🌙";
+    });
+}

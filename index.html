@@ -40,9 +40,10 @@
             </div>
 
             <p class="buttonText">When I'm not debugging my life or my code, you'll find me...</p>
-            <button class="main__hobbiesButton">press to reveal/hide my hobbies</button>
+            <button class="main__hobbiesButton" aria-expanded="false" aria-controls="hobbies">press to reveal/hide my
+                hobbies</button>
 
-            <div class="paragraph" style="display:none;">
+            <div id="hobbies" class="paragraph" style="display:none;" aria-hidden="true">
                 <p>📖Reading</p>
                 <p>🛍️Shopping</p>
                 <p>🎬Catching up on my favourite show on Netflix</p>
